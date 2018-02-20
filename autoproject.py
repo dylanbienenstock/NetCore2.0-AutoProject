@@ -215,7 +215,7 @@ namespace ${name}
 		{
 			services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(Configuration["DBInfo:ConnectionString"]));
 
-			services.AddIdentity<ApplicationUser, IdentityRole>()
+			services.AddIdentity<User, IdentityRole>()
 			.AddEntityFrameworkStores<DatabaseContext>()
 			.AddDefaultTokenProviders();
 
